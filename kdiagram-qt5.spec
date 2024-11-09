@@ -4,7 +4,7 @@ Summary(pl.UTF-8):	KDiagram - biblioteki do tworzenia diagramów biznesowych
 Name:		kdiagram-qt5
 # keep 2.x here for Qt5
 Version:	2.8.0
-Release:	1
+Release:	2
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/kdiagram/%{version}/kdiagram-%{version}.tar.xz
@@ -28,6 +28,7 @@ Requires:	Qt5Gui >= %{qt_ver}
 Requires:	Qt5PrintSupport >= %{qt_ver}
 Requires:	Qt5Svg >= %{qt_ver}
 Requires:	Qt5Widgets >= %{qt_ver}
+Obsoletes:	kdiagram < 3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -48,6 +49,7 @@ Requires:	Qt5Core-devel >= %{qt_ver}
 Requires:	Qt5PrintSupport-devel >= %{qt_ver}
 Requires:	Qt5Svg-devel >= %{qt_ver}
 Requires:	Qt5Widgets-devel >= %{qt_ver}
+Obsoletes:	kdiagram-devel < 3
 
 %description devel
 Header files for KDiagram development.
